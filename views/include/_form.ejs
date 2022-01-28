@@ -1,0 +1,38 @@
+<!-- form handling -->
+<form action="/api/tasks" method="POST" id="add_task">
+    <div class="new_task">
+        <div class="form-group">
+            <label for="task" class="text-light">Task</label>
+            <input type="hidden" task="id" value="">
+            <input type="text" task="task" value="" placeholder="football,coding">
+        </div>
+        <div class="form-group">
+            <label for="Date" class="text-light">Date</label>
+            <input type="text" task="date" value="" placeholder="13/09/1999">
+        </div>
+        <div class="form-group">
+            <label for="priority" class="text-light">priority</label>
+            <input type="text" task="priority" value="" placeholder="urgent,importnant">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="starred" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" task="status" value="completed" >
+                <label for="radio-4" class="radio-label">completed</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" task="status" value="not completed" >
+                <label for="radio-5" class="radio-label">Not completed</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+
+

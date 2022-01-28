@@ -1,0 +1,62 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Tasks</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Task</h2>
+            <span class="text-light">Use the below form to Update an task</span>
+        </div>
+
+        <!-- add task form -->
+         <!-- form handling -->
+ <form method="POST" id="update_task">
+    <div class="new_task">
+        <div class="form-group">
+            <label for="task" class="text-light">Task</label>
+            <input type="hidden" task="id" value="<%= task._id %>">
+            <input type="text" task="task" value="<%= task.task %>" placeholder="criket,football">
+        </div>
+        <div class="form-group">
+            <label for="date" class="text-light">Date</label>
+            <input type="text" task="date" value="<%= task.date%>" placeholder="13/09/1975">
+        </div>
+        <div class="form-group">
+            <label for="priority" class="text-light">Priority</label>
+            <input type="text" task="priority" value="<%= task.priority%>" placeholder="urgent,importnant">
+        </div>
+
+        <div class="form-group">
+            <label for="status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" task="status" value="comlpeted" <%= task.status == 'completed' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">completed</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" task="status" value="not comlpeted" <%= task.status == 'Not completed' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">Not completed</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
